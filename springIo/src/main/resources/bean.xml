@@ -1,0 +1,41 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+
+	<!-- bean Factory -->
+	<!--explicit Injection-->
+
+
+	<bean id="p" class="com.academic.beans.Person">
+		<!-- setter Injection -->
+		<property name="message" value="some new one" />
+
+	</bean>
+
+	<bean id="emp" class="com.academic.beans.Employee">
+		<!-- constructor Injection -->
+		<constructor-arg name="emp_Id" value="043" />
+		<constructor-arg name="emp_Name" value="shanth" />
+		<constructor-arg name="emp_Salary" value="50000" />
+		<constructor-arg name="emp_Email" value="shanth043@outlook.com" />
+		
+		
+	</bean>
+
+	<bean id="car" class="com.academic.beans.Car">
+		<!-- setter Injection -->
+		<property name="model_Number" value="2222" />
+
+
+		<!-- constructor Injection -->
+		<constructor-arg index="0" value="Hyundai" />
+	    <constructor-arg index="0" value="Hyundai" />	
+	
+	</bean>
+
+
+</beans>
